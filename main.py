@@ -24,7 +24,7 @@ def csv_to_json(content: str):
     reader = csv.DictReader(content.splitlines())
     for row in reader:
         json_content.append(row)
-    return json.dumps(json_content)
+    return json.loads(json.dumps(json_content))
 
 
 @app.get("/")
