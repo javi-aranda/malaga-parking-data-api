@@ -1,9 +1,9 @@
 from typing import List
-from api.services.parking import fetch_latest
+from app.services.parking import fetch_latest
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import JSONResponse
 from loguru import logger
-from api.models.parking import ParkingDataResponse
+from app.models.parking import ParkingDataResponse
 
 router = APIRouter()
 

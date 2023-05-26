@@ -5,7 +5,7 @@ from loguru import logger
 from starlette.config import Config
 from starlette.datastructures import Secret
 
-from api.core.logging import InterceptHandler
+from app.core.logging import InterceptHandler
 
 config = Config(".env")
 

@@ -5,7 +5,9 @@ El proyecto Málaga Parking Data API nace para darle forma a los datos recopilad
 
 ## Uso
 
-La respuesta de la API será en un formato similar a:
+La documentación de los endpoint se encuentra disponible en `/api/docs`.
+
+La respuesta de la API `GET /api/v1/latest/` es:
 
 ```json
 [

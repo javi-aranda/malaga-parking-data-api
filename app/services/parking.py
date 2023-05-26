@@ -4,7 +4,7 @@ import json
 from functools import lru_cache
 from loguru import logger
 
-from api.core.config import LATEST_CSV
+from app.core.config import LATEST_CSV
 
 def csv_to_json(content: str):
     json_content = []
