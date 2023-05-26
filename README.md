@@ -1,6 +1,6 @@
 # Málaga Parking Data API
 
-El proyecto Málaga Parking Data API nace para darle forma a los datos recopilados en el repositorio 
+El proyecto Málaga Parking Data API nace para darle forma a los datos recopilados en el repositorio
 [malaga-parking-data](https://github.com/javisenberg/malaga-parking-data).
 
 ## Uso

@@ -1,10 +1,12 @@
-import requests
 import csv
 import json
 from functools import lru_cache
+
+import requests
 from loguru import logger
 
 from app.core.config import LATEST_CSV
+
 
 def csv_to_json(content: str):
     json_content = []
@@ -12,6 +14,7 @@ def csv_to_json(content: str):
     for row in reader:
         json_content.append(row)
     return json.loads(json.dumps(json_content))
+
 
 @lru_cache()
 def fetch_latest() -> str:

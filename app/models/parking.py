@@ -1,4 +1,5 @@
 from typing import Optional
+
 from pydantic import BaseModel, Field
 
 
@@ -13,9 +14,13 @@ class ParkingDataResponse(BaseModel):
     altitude: float = Field(..., alias="altitud")
     total_spots: Optional[str] = Field(..., alias="capacidad")
     disabled_spots: Optional[str] = Field(..., alias="capacidad_discapacitados")
-    latest_updated: Optional[str] = Field(..., alias="fechahora_ultima_actualizacion")
+    latest_updated: Optional[str] = Field(
+        ..., alias="fechahora_ultima_actualizacion"
+    )  # noqa: E501
     available_spots: int = Field(..., alias="libres")
-    available_disability_spots: Optional[str] = Field(..., alias="libres_discapacitados")
+    available_disability_spots: Optional[str] = Field(
+        ..., alias="libres_discapacitados"
+    )
     orange_occupation_level: Optional[str] = Field(..., alias="nivelocupacion_naranja")
     red_occupation_level: Optional[str] = Field(..., alias="nivelocupacion_rojo")
     smassa_sector_sare: Optional[str] = Field(..., alias="smassa_sector_sare")

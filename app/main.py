@@ -9,4 +9,5 @@ def get_application() -> FastAPI:
     application.include_router(api_router, prefix=API_PREFIX)
     return application
 
+
 app = get_application()

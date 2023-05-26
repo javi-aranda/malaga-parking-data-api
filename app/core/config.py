@@ -1,5 +1,5 @@
-import sys
 import logging
+import sys
 
 from loguru import logger
 from starlette.config import Config
@@ -18,7 +18,7 @@ SECRET_KEY: Secret = config("SECRET_KEY", cast=Secret, default="")
 
 PROJECT_NAME: str = config("PROJECT_NAME", default="Málaga Parking Data API")
 
-BASE_URL = "https://raw.githubusercontent.com/javisenberg/malaga-parking-data/master"
+BASE_URL = "https://raw.githubusercontent.com/javisenberg/malaga-parking-data/master"  # noqa: E501
 LATEST_CSV = f"{BASE_URL}/latest.csv"
 
 # logging configuration
