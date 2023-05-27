@@ -1,6 +1,6 @@
 from typing import Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, validator
 
 
 class ParkingDataResponse(BaseModel):
@@ -24,3 +24,31 @@ class ParkingDataResponse(BaseModel):
     orange_occupation_level: Optional[str] = Field(..., alias="nivelocupacion_naranja")
     red_occupation_level: Optional[str] = Field(..., alias="nivelocupacion_rojo")
     smassa_sector_sare: Optional[str] = Field(..., alias="smassa_sector_sare")
+
+    @validator("total_spots")
+    def validate_total_spots(cls, v):
+        return None if v == "None" else v
+
+    @validator("disabled_spots")
+    def validate_disabled_spots(cls, v):
+        return None if v == "None" else v
+
+    @validator("latest_updated")
+    def validate_latest_updated(cls, v):
+        return None if v == "None" else v
+
+    @validator("available_disability_spots")
+    def validate_available_disability_spots(cls, v):
+        return None if v == "None" else v
+
+    @validator("orange_occupation_level")
+    def validate_orange_occupation_level(cls, v):
+        return None if v == "None" else v
+
+    @validator("red_occupation_level")
+    def validate_red_occupation_level(cls, v):
+        return None if v == "None" else v
+
+    @validator("smassa_sector_sare")
+    def validate_smassa_sector_sare(cls, v):
+        return None if v == "None" else v
