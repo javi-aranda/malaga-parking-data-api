@@ -3,11 +3,24 @@
 El proyecto Málaga Parking Data API nace para darle forma a los datos recopilados en el repositorio
 [malaga-parking-data](https://github.com/javisenberg/malaga-parking-data).
 
-## Uso
+## Instalación de dependencias y uso
+
+Se puede clonar el proyecto mediante el comando
+```bash
+~ git clone https://github.com/javisenberg/malaga-parking-data-api.git
+```
+
+Para trabajar de forma local se recomienda crear un entorno virtual de Python >= 3.9
+```bash
+~ python3.9 -m venv ~/.venvs/malaga-parking-api
+~ source ~/.venvs/malaga-parking-api/bin/activate
+(malaga-parking-api) ~ pip install -r requirements/requirements.txt
+(malaga-parking-api) ~ uvicorn app.main:app --port 8000
+```
 
 La documentación de los endpoint se encuentra disponible en `/api/docs`.
 
-La respuesta de la API `GET /api/v1/latest/` es:
+La respuesta de la API `GET /api/v1/latest` es:
 
 ```json
 [
